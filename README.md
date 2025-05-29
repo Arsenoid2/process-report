@@ -1,15 +1,14 @@
-##📄 PowerShell Version: simple-win-process-report.ps1
-###✅ Overview
+## 📄 PowerShell Version: simple-win-process-report.ps1
+### ✅ Overview
 This is a simple PowerShell script for Windows that generates a basic report of currently running processes. It captures key details like:
-```
-Process ID (PID)
-Process Name
-CPU Time
-Memory Usage in Megabytes (MB)
-```
+- Process ID (PID)
+- Process Name
+- CPU Time
+- Memory Usage in Megabytes (MB)
+
 The script saves this information to a CSV file named process_report.csv, which can be opened with spreadsheet applications like Microsoft Excel or Google Sheets.
 
-###📥 How to Download and Run
+### 📥 How to Download and Run
 1. Download the Script
 - Go to the project repository on GitHub.
 - Click on simple-win-process-report.ps1.
@@ -37,7 +36,7 @@ The script creates a file called process_report.csv in the same folder. You can 
 - LibreOffice Calc
 - Or any text editor that supports CSV
 
-###⚖️ Pros and Limitations
+### ⚖️ Pros and Limitations
 ✅ Advantages
 - No external dependencies: Runs on any Windows system with PowerShell — no need to install Python or third-party tools.
 - Quick and easy: Just download and run; ideal for non-technical users or quick checks.
