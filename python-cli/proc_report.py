@@ -4,9 +4,9 @@ import time
 import json
 import csv
 import psutil
+import argparse
 
 def get_processes_info():
-    # Initialize CPU tracking
     for proc in psutil.process_iter():
         try:
             proc.cpu_percent(interval=None)
@@ -40,7 +40,7 @@ def save_report(data, format, output):
             json.dump(data, f, indent=4)
 
 def prompt_for_format():
-    print("THANKS FOR CONSIDERING MY CONDIDACY")
+    print("THANKS FOR CONSIDERING MY CANDIDACY")
     print("This tool exports system processes information to a file.")
     print("Select output format:")
     print("1. CSV")
@@ -56,9 +56,18 @@ def prompt_for_format():
         sys.exit(1)
 
 def main():
-    file_format, file_name = prompt_for_format()
-    data = get_processes_info()
+    parser = argparse.ArgumentParser(description='Generate a process report.')
+    parser.add_argument('-f', '--format', choices=['csv', 'json'], help='Output format')
+    parser.add_argument('-o', '--output', help='Output file name')
+    args = parser.parse_args()
 
+    if args.format and args.output:
+        file_format = args.format
+        file_name = args.output
+    else:
+        file_format, file_name = prompt_for_format()
+
+    data = get_processes_info()
     if not data:
         print("⚠️ No process data found or access denied.")
         return
