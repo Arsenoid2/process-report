@@ -1,4 +1,14 @@
-The only mandatory dependancy for this project is __psutil__, that provides accurate CPU and Memory usage and lists the processes for all users on the machine. Also this approach is crossplatform and can be executed on both Windows and MacOS systems.
+## Multiplatfom solution
+This implementation of the tool includes:
+* Python based background,
+* Can resolve CPU and Memory usage more accurately,
+* Provides User information of the process,
+* Multiplatform (Win & Mac),
+* Easy and user-friendly flow,
+* Including automated tests,
+* Simple CI pipeline in GitHub Actions,
+
+only mandatory dependancy for this project is __psutil__, that provides accurate CPU and Memory usage and lists the processes for all users on the machine. Also this approach is crossplatform and can be executed on both Windows and MacOS systems.
 There is also recommended dependancy __pytest__, that is only used for automated test of the tool.
 For installation __psutil__ and __pstest__ on the system must be preinstalled 🐍__python__ environment with it's __pip__ package manager. If you don't have, follow this first:
 
