@@ -11,7 +11,7 @@ The script saves this information to a CSV file named process_report.csv, which 
 ### 📥 How to Download and Run
 1. Download the Batch file
 - Go to the project repository on GitHub.
-- Click on run-win-process-report.ps1.
+- Click on win-process-report.ps1.
 - Click “📥” icon (Download raw file),
 - Save the file to a folder like Downloads or Documents.
 
