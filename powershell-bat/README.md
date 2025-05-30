@@ -1,6 +1,6 @@
-## 📄 PowerShell Version: simple-win-process-report.ps1
+## 📄 PowerShell Version: win-process-report.bat
 ### ✅ Overview
-This is a simple PowerShell script for Windows that generates a basic report of currently running processes. It captures key details like:
+This is a simple Batch file that executes PowerShell script for Windows that generates a basic report of currently running processes. It captures key details like:
 - Process ID (PID)
 - Process Name
 - CPU Time

@@ -1,0 +1,12 @@
+- name: Provision Windows machine for process report tool
+  hosts: windows
+  tasks:
+    - name: Install Python
+      win_package:
+        name: Python
+        path: https://www.python.org/ftp/python/3.14.0/python-3.14.0b2.exe
+        arguments: /quiet InstallAllUsers=1 PrependPath=1
+      become: yes
+
+    - name: Install psutil
+      win_command: python -m pip install psutil
