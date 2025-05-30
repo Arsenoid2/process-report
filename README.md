@@ -11,18 +11,17 @@ The script saves this information to a CSV file named process_report.csv, which 
 ### 📥 How to Download and Run
 1. Download the Batch file
 - Go to the project repository on GitHub.
-- Click on win-process-report.ps1.
+- Click on __win-process-report.ps1__.
 - Click “📥” icon (Download raw file),
 - Save the file to a folder like Downloads or Documents.
 
 2. Run the Batch file on Windows
 - Double-click the saved file and choose where to save report file, or:
 
-__Alternatively:__
+_Alternatively:_
 - Open PowerShell and navigate to the folder where you want to place the report:
 ```powershell
-cd Downloads  # or wherever you saved it
-.\simple-win-process-report.ps1
+cd Downloads  # or wherever you want to place the report.
 ```
 - Execute the following command to generate the report:
 ```powershell
