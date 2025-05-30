@@ -1,4 +1,4 @@
-# Proc Report CLI Tool
+# Process-Report CLI Tool
 
 This repository contains multiple implementations for generating a detailed process report.
 
@@ -7,7 +7,7 @@ This repository contains multiple implementations for generating a detailed proc
 ### 🟦 `bat-version/` (Windows only, zero dependencies)
 - Generates CSV report using native PowerShell from a `.bat` file.
 
-### 🐍 `python-cli/` (Cross-platform, requires `psutil`)
+### 🐍 `python-cli/` (Cross-platform, requires `psutil` and `pytest`)
 - CLI tool with CSV/JSON output
 - CI pipeline (GitHub Actions)
 - Optional visualization and tests

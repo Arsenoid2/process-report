@@ -1,0 +1,27 @@
+name: Test Proc Report
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install psutil pytest
+
+    - name: Run script (non-interactive)
+      run: python python-cli/proc_report.py -f json -o test.json
+
+    - name: Run script (interactive)
+      run: echo 1 | python python-cli/proc_report.py
+
+    - name: Run tests
+      run: pytest python-cli/test_proc_report.py
