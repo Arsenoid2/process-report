@@ -73,7 +73,7 @@ def main():
         return
 
     save_report(data, file_format, file_name)
-    print(f"✅ Report saved to: {os.path.abspath(file_name)}")
+    print(f"Report saved to: {os.path.abspath(file_name)}")
 
 if __name__ == '__main__':
     main()
