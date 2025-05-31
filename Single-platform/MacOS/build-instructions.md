@@ -1,5 +1,5 @@
 # 🛠️ Build Instructions: macOS Standalone App
-As mentioned in [README.md](https://github.com/Arsenoid2/process-report/README.md), [Process Reporter v1.0.0_Mac](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip) application for MacOS added in GitHub Releases, anyway following you can find the bulding instruction to create a fully standalone macOS `.app` version of the Process Reporting tool using the MacOS built-in __Automator__ app. This method avoids terminal usage and provides a double-clickable interface for non-technical users.
+As mentioned in [README.md](https://github.com/Arsenoid2/process-report/blob/main/README.md), [Process Reporter v1.0.0_Mac](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip) application for MacOS added in GitHub Releases, anyway following you can find the bulding instruction to create a fully standalone macOS `.app` version of the Process Reporting tool using the MacOS built-in __Automator__ app. This method avoids terminal usage and provides a double-clickable interface for non-technical users.
 
 ## 🔧 Step-by-Step: Create the App using Automator
 1. Open Automator from Spotlight (Cmd + Space, then type "Automator").
