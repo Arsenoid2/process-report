@@ -8,9 +8,9 @@ To demonstrate different levels of usability and portability, the project includ
 
 ---
 
-## 🟦 `single-platform/` – Zero Dependencies
+## 🟦 `Single-platform/` – Zero Dependencies
 
-Platform-specific tools written using native scripting languages. Detailed instructions and alternatives in [`single-platform/README.md`](./single-platform/README.md)
+Platform-specific tools written using native scripting languages. Detailed instructions and alternatives in [`Single-platform/README.md`](./Single-platform/README.md)
 
 ### 🔹 Windows
 - `.bat` launcher that calls a PowerShell script to generate a process report in **CSV format**
@@ -25,7 +25,7 @@ Platform-specific tools written using native scripting languages. Detailed instr
 
 ---
 
-## 🐍 `cross-platform/` – Python CLI Version
+## 🐍 `Cross-platform/` – Python CLI Version
 
 A flexible CLI tool built with Python that runs on **both Windows and macOS**.
 
@@ -40,7 +40,7 @@ A flexible CLI tool built with Python that runs on **both Windows and macOS**.
   - 🔁 CI pipeline via GitHub Actions
   - 🧪 Automated tests using `pytest`
 
-Details in [`cross-platform/README.md`](./cross-platform/README.md)
+Details in [`Cross-platform/README.md`](./Cross-platform/README.md)
 
 ---
 
@@ -55,8 +55,8 @@ Details in [`cross-platform/README.md`](./cross-platform/README.md)
 
 Choose one of the following:
 
-- **No Python?** Use the scripts in [`single-platform`](./single-platform/) for quick results.
-- **Python available?** Try the full-featured version in [`cross-platform`](./cross-platform/).
+- **No Python?** Use the scripts in [`Single-platform`](./Single-platform/) for quick results.
+- **Python available?** Try the full-featured version in [`Cross-platform`](./Cross-platform/).
 
 Each subfolder has its own `README.md` with platform-specific instructions.
 
