@@ -5,19 +5,21 @@
 
 _This repository is created as interview task report._
 
-For better demonstration and capabilities created two implementations for generating a detailed process report.
-
-### 🟦 `single-platform` (requires zero dependencies)
+For demonstrating different scenarios and aproaches implemented two variants for generating a detailed process report:
+### 🟦 `Single-platform` (requires zero dependencies)
 * Windows version
-    - Generates CSV report to a folder by your choice
-    - Based on native PowerShell execution and NOT requires any prerequisites
-    - Implemented in `.bat` format and in ready-to-run state.
-    - Has pure vizualization capability and not lists the user of the process.
+    - Generates CSV report and saves to the asked folder
+    - Implemented in `.bat` extension and in ready-to-run state
+    - Additionally provided PowerShell command in [README.md]() of the subfolder
+    - Has pure vizualization capability and _not lists_ the user of the process.
 * MacOS version
-    - Generates CSV / JSON and saves to a folder all by your choice
-    - Based on native bash execution and NOT requires any prerequisites
-    - Created one-click application, stored in [Releases](https://github.com/Arsenoid2/process-report/releases) and can be dowloaded by [Process_Reporter_v1.0.0_Mac.zip](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip)
-    - Additionally `.sh` command have been stored in the [single-platform](https://github.com/Arsenoid2/process-report/tree/main/Single-platform) folder
+    - Generates CSV / JSON report by your choice and stores where you choose
+    - Implemented in `.sh` extension and must be premade executable by
+    ```bash
+    chmod +x /dir/to/process-report/single-platform/MacOS/mac-process-report.sh #replace /dir/to with actual direction
+    ```
+    - Additionally converted to the ready-to-run application, stored in [Releases](https://github.com/Arsenoid2/process-report/releases/tag/v1.0.0) and can be download by this [link](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip)
+    - Has better vizualizatoin capability and lists all the neccessary metrics in report file
 
 
 ### 🐍 `cross-platform` (requires `psutil` and `pytest` (optional))
