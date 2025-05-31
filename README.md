@@ -1,36 +1,63 @@
 ![CI](https://github.com/Arsenoid2/process-report/actions/workflows/test.yml/badge.svg)
 
-# __Process Reporter__ Tool
+# 🧾 Process Reporter Tool
 
-_This repository was created as an interview task report._
+_This repository was created as part of a practical interview task._
 
-To demonstrate different scenarios and approaches, two variants for generating a detailed process report are implemented:
+To demonstrate different levels of usability and portability, the project includes **two versions** of a tool that generates detailed reports of running processes on a machine:
 
-### 🟦 `single-platform` (zero dependencies)
-* **Windows version**
-    - Generates a CSV report and saves it to the specified folder
-    - Implemented as a `.bat` script, ready to run
-    - Additional PowerShell command provided in the subfolder's `README.md`
-    - Provides basic visualization, but does _not_ list the user of each process
-* **MacOS version**
-    - Generates CSV or JSON report (user's choice) and saves it to the chosen location
-    - Implemented as a `.sh` script; make it executable with:
-    ```bash
-    chmod +x /path/to/process-report/single-platform/MacOS/mac-process-report.sh
-    ```
-    - Also available as a ready-to-run application in [Releases](https://github.com/Arsenoid2/process-report/releases/tag/v1.0.0) ([download link](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip))
-    - Provides enhanced visualization and lists all necessary metrics in the report
+---
 
-### 🐍 `cross-platform` (requires `psutil`, `pytest` optional)
-- Python-based CLI tool with CSV/JSON output
-- One-click launchers for Windows and Mac
-- Optional visualization
-- Automated tests
+## 🟦 `single-platform/` – Zero Dependencies
 
-Additional features:
-- Auto-deployment mechanism using Ansible (see the `ansible` folder for configurations and instructions)
-- CI pipeline via GitHub Actions
+Platform-specific tools written using native scripting languages. Detailed instructions and alternatives in [`single-platform/README.md`](./single-platform/README.md)
 
-## How to Use
+### 🔹 Windows
+- `.bat` launcher that calls a PowerShell script to generate a process report in **CSV format**
+- No dependencies required — runs on any modern Windows system
+- Has limitaion of listing process user in the report
 
-Navigate to the relevant folder and follow the instructions in its `README.md`.
+### 🍏 macOS
+- `.sh` shell script using native **AppleScript dialogs** to export reports in **CSV or JSON**
+- Fully self-contained; no external dependencies
+- Also available as a ready-to-use native app in [GitHub Releases](https://github.com/Arsenoid2/process-report/releases/tag/v1.0.0)  
+  ⬇️ [Download Process Reporter for macOS](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip)
+
+---
+
+## 🐍 `cross-platform/` – Python CLI Version
+
+A flexible CLI tool built with Python that runs on **both Windows and macOS**.
+
+### ✅ Features
+- Reports: `pid`, `name`, `user`, `cpu_percent`, `memory_mb`
+- Output formats: **CSV** or **JSON**
+- Interactive prompts or CLI arguments
+- One-click launchers:
+  - `launcher.bat` for Windows
+  - `launcher.command` for macOS
+- Includes:
+  - 🔁 CI pipeline via GitHub Actions
+  - 🧪 Automated tests using `pytest`
+
+Details in [`cross-platform/README.md`](./cross-platform/README.md)
+
+---
+
+## 📦 Infrastructure as Code
+
+- The `IaC_ansible/` directory contains an [Ansible playbook](./IaC_ansible/playbook.yml) for automated setup and deployment of the Python version.
+- Designed for Windows targets using remote PowerShell execution.
+
+---
+
+## 📖 How to Get Started
+
+Choose one of the following:
+
+- **No Python?** Use the scripts in [`single-platform`](./single-platform/) for quick results.
+- **Python available?** Try the full-featured version in [`cross-platform`](./cross-platform/).
+
+Each subfolder has its own `README.md` with platform-specific instructions.
+
+Happy reporting and thanks for considering my candidacy! 📊

@@ -1,55 +1,94 @@
-## 📄 PowerShell Version: win-process-report.bat
-### ✅ Overview
-This is a simple Batch file that executes PowerShell script for Windows that generates a basic report of currently running processes. It captures key details like:
+# 🖥️ Single-Platform Process Report Tool
+
+This folder contains standalone utilities tailored for specific platforms — **Windows** and **macOS** — to generate a process report without needing Python or any external dependencies. These are ideal for non-technical users or one-off use cases.
+
+---
+
+## 📄 Windows: `win-process-report.bat` (Double-click to run) / `win-process-report.ps1` (Execute in PowerShell/Command Prompt)
+
+This tool provides a simple way to generate a report of currently running processes on Windows. It captures:
+
 - Process ID (PID)
 - Process Name
 - CPU Time
-- Memory Usage in Megabytes (MB)
+- Memory Usage (in Megabytes)
 
-The script saves this information to a CSV file named process_report.csv, which can be opened with spreadsheet applications like Microsoft Excel or Google Sheets.
+The output is saved as a **CSV file**, viewable in Excel, Google Sheets, LibreOffice Calc, etc.
 
-### 📥 How to Download and Run
-1. Download the Batch file
-- Go to the project repository on GitHub.
-- Click on __win-process-report.ps1__.
-- Click “📥” icon (Download raw file),
-- Save the file to a folder like Downloads or Documents.
+### 📥 How to Use
 
-2. Run the Batch file on Windows
-- Double-click the saved file and choose where to save report file, or:
+1. **Download** `win-process-report.bat` from the repository.
+2. **Double-click** it to run.
+3. Choose where to save the report (you’ll be prompted).
+4. Open the generated `process_report.csv` file using your preferred spreadsheet app.
 
-_Alternatively:_
-- Open PowerShell and navigate to the folder where you want to place the report:
-```powershell
-cd Downloads  # or wherever you want to place the report.
-```
-- Execute the following command to generate the report:
-```powershell
-Get-Process | Select-Object Id, ProcessName, CPU,
-@{Name="Memory (MB)";Expression={[math]::Round($_.WS / 1MB, 2)}} |
-Export-Csv -Path process_report.csv -NoTypeInformation
-```
-- Allow Script Execution (if prompted)
-If you see a security warning about script execution, run:
+> 💡 The `.bat` file internally calls PowerShell to execute the actual data collection (`win-process-report.ps1`).
+
+### 🔧 Manual Alternative via PowerShell
+
+If you prefer not to use the `.bat` file, then copy-paste the content of [`win-process-report.ps1`](https://github.com/Arsenoid2/process-report/blob/main/Single-platform/Windows/win-process-report.ps1) to PowerShell and run it.
+If script execution is blocked, run this before execution of the script:
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
-This will temporarily allow the script to run without changing global system settings.
-
-3. Output
-The script creates a file called process_report.csv in the selected/same folder. You can open it using:
-- Microsoft Excel
-- Google Sheets
-- LibreOffice Calc
-- Or any text editor that supports CSV
 
 ### ⚖️ Pros and Limitations
-✅ Advantages
-- No external dependencies: Executes on any Windows system — no need to install Python or third-party tools.
-- Quick and easy: Just download and run; ideal for non-technical users or quick checks.
-- CSV output: Easily viewable in Excel, Google Sheets, or other spreadsheet tools.
 
-⚠️ Limitations
-- Windows-only: Not compatible with macOS or Linux.
-- Basic metrics only: Does not include per-user breakdown or real-time CPU %.
-- CSV only: No JSON support or advanced data formats.
+**✅ Advantages**
+- No installation required — works out of the box on any modern Windows system.
+- Simple CSV output for easy inspection.
+- Ideal for quick checks or end-user environments.
+
+**⚠️ Limitations**
+- Windows-only.
+- Does not include per-user attribution or live CPU %.
+- CSV only — no JSON support.
+
+---
+
+## 🍎 macOS: `mac-process-report.sh`
+
+This is an AppleScript-enhanced shell script designed for macOS. It uses native dialogs to prompt users for:
+- Export format: **CSV** or **JSON**
+- Output file location
+
+It collects the following data:
+- PID
+- User
+- Process Name
+- CPU Time
+- Memory Usage in MB
+
+### 📥 How to Use
+
+1. Download `mac-process-report.sh`.
+2. Make it executable:
+```bash
+chmod +x ./mac-process-report.sh
+```
+3. Run the script by double-clicking it or from Terminal:
+```bash
+bash mac-process-report.sh
+```
+4. Choose format and destination via graphical dialogs.
+5. Open the generated report file using:
+   - Excel or Google Sheets (CSV)
+   - Any JSON viewer or text editor (JSON)
+
+### 💡 Tip: Create a macOS App
+
+As mentioned in [README.md](https://github.com/Arsenoid2/process-report/blob/main/README.md), a user-friendly [Process Reporter v1.0.0_Mac](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip) MacOS app added in GitHub Releases and can be downloaded and run. If you prefer to build the app yourself, see [Build Instructions](./MacOS/build-instruction.md). You can create a native `.app` file using Automator that runs this script with double-click.
+
+### ⚖️ Pros and Limitations
+
+**✅ Advantages**
+- No dependencies — uses macOS native tools.
+- User-friendly UI dialogs.
+- JSON or CSV support.
+
+**⚠️ Limitations**
+- macOS-only.
+
+---
+
+For advanced, cross-platform support, refer to the [`cross-platform`](../cross-platform/) version of this tool powered by Python.
