@@ -1,10 +1,13 @@
+![CI](https://github.com/Arsenoid2/process-report/actions/workflows/test.yml/badge.svg)
+
+
 # Process-Report CLI Tool
 
 This repository contains two implementations for generating a detailed process report.
 
 ## Variants
 
-### 🟦 `bat-version/` (Windows only, zero dependencies)
+### 🟦 `powershell-bat/` (Windows only, zero dependencies)
 - Generates CSV report using native PowerShell from a `.bat` file.
 - This varian NOT requires any prerequisites and in ready-to-run state.
 - Has pure vizualization capability and not lists the user of the process.
