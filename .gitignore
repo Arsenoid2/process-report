@@ -1,0 +1,6 @@
+# macOS App Bundle artifacts
+*.app/
+*.zip
+Contents/
+
+# Instead just add .zip files to GitHub releases
