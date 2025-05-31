@@ -7,6 +7,7 @@ import psutil
 import argparse
 
 def get_processes_info():
+    # Initialize CPU tracking
     for proc in psutil.process_iter():
         try:
             proc.cpu_percent(interval=None)
@@ -18,7 +19,8 @@ def get_processes_info():
     for proc in psutil.process_iter(['pid', 'name', 'username', 'cpu_percent', 'memory_info']):
         try:
             info = proc.info
-            mem_usage = info['memory_info'].rss / (1024 * 1024)
+            mem_info = info.get('memory_info')
+            mem_usage = mem_info.rss / (1024 * 1024) if mem_info else 0
             processes.append({
                 'pid': info['pid'],
                 'name': info['name'] or 'N/A',
@@ -55,6 +57,13 @@ def prompt_for_format():
         print("❌ Invalid input. Please enter 1 or 2.")
         sys.exit(1)
 
+def safe_print_report_path(path):
+    msg = f"Report saved to: {os.path.abspath(path)}"
+    try:
+        print(f"✅ {msg}")
+    except UnicodeEncodeError:
+        print(msg)
+
 def main():
     parser = argparse.ArgumentParser(description='Generate a process report.')
     parser.add_argument('-f', '--format', choices=['csv', 'json'], help='Output format')
@@ -73,7 +82,7 @@ def main():
         return
 
     save_report(data, file_format, file_name)
-    print(f"Report saved to: {os.path.abspath(file_name)}")
+    safe_print_report_path(file_name)
 
 if __name__ == '__main__':
     main()
