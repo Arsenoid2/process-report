@@ -18,10 +18,10 @@ jobs:
       run: pip install psutil pytest
 
     - name: Run script (non-interactive)
-      run: python python-cli/proc_report.py -f json -o test.json
+      run: python cross-platform/proc_report.py -f json -o test.json
 
     - name: Run script (interactive)
-      run: echo 1 | python python-cli/proc_report.py
+      run: echo 1 | python cross-platform/proc_report.py
 
     - name: Run tests
-      run: pytest python-cli/test_proc_report.py
+      run: pytest cross-platform/test_proc_report.py
