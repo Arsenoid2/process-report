@@ -1,3 +1,5 @@
+![CI](https://github.com/Arsenoid2/process-report/actions/workflows/test.yml/badge.svg)
+
 ## Multiplatfom solution
 This implementation of the tool includes:
 * Python based background,
