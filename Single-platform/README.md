@@ -91,4 +91,4 @@ As mentioned in [README.md](https://github.com/Arsenoid2/process-report/blob/mai
 
 ---
 
-For advanced, cross-platform support, refer to the [`cross-platform`](./cross-platform/) version of this tool powered by Python.
+For advanced, cross-platform support, refer to the [`cross-platform`](https://github.com/Arsenoid2/process-report/tree/c71788a9ecc9d8324de19608c725f202820376e9/Cross-platform) version of this tool powered by Python.
