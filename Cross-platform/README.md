@@ -22,7 +22,7 @@ This folder contains a Python-based CLI utility that generates detailed reports 
 
 ---
 
-## 🐍 Requirements
+## 🐍 Requirements (dependencies)
 
 - **Python 3.7+**
 - **psutil** (required)
