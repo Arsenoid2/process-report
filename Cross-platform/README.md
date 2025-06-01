@@ -93,7 +93,7 @@ If you omit the arguments, the script will enter interactive mode and ask you fo
 To run the automated tests (requires `pytest`):
 
 ```bash
-pytest test_proc_report.py
+pytest /dir/to/process-report/Cross-platform/test_proc_report.py # replace /dir/to with the actual dir
 ```
 
 ---
