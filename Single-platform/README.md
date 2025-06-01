@@ -17,7 +17,7 @@ The output is saved as a **CSV file**, viewable in Excel, Google Sheets, LibreOf
 
 ### 📥 How to Use
 
-1. **Download** `win-process-report.bat` from the repository.
+1. **Download** [`win-process-report.bat`](https://github.com/Arsenoid2/process-report/blob/e17a9c796b48fa9711a7f70aca37c4b675a6dfde/Single-platform/Windows/win-process-report.bat) from the repository.
 2. **Double-click** it to run.
 3. Choose where to save the report (you’ll be prompted).
 4. Open the generated `process_report.csv` file using your preferred spreadsheet app.
