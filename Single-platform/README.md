@@ -41,7 +41,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 **⚠️ Limitations**
 - Windows-only.
-- Does not include per-user attribution or live CPU %.
+- Does not include per-user attribution.
 - CSV only — no JSON support.
 
 ---
