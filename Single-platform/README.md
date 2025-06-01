@@ -61,7 +61,7 @@ It collects the following data:
 
 ### 📥 How to Use
 
-1. Download `mac-process-report.sh`.
+1. Download [`mac-process-report.sh`](https://github.com/Arsenoid2/process-report/blob/e17a9c796b48fa9711a7f70aca37c4b675a6dfde/Single-platform/MacOS/mac-process-report.sh).
 2. Make it executable:
 ```bash
 chmod +x ./mac-process-report.sh
