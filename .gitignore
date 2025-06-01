@@ -2,5 +2,6 @@
 *.app/
 *.zip
 Contents/
+.pytest_cache/
 
 # Instead just add .zip files to GitHub releases

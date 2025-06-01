@@ -60,4 +60,52 @@ Choose one of the following:
 
 Each subfolder has its own `README.md` with platform-specific instructions.
 
+---
+
+## 📊 Visualization
+
+Once a process report is generated (either as `.csv` or `.json`), you can analyze it using any spreadsheet or visualization tool — such as **Excel**, **Google Sheets**, or **LibreOffice Calc**.
+
+These tools allow you to quickly explore and visualize system metrics such as:
+
+- Total number of running processes per user
+- Aggregate CPU or memory usage per user
+- Most CPU- or memory-hungry processes
+- And combine some filters together
+
+---
+
+### 🔎 Example Visualizations
+
+Below are a few example insights generated using Microsoft Excel's **Pivot Tables** and **Charts** created in the [process_report.csv](./visualizations/process_report.csv) file.
+
+#### 🧍 Process Count per User (Pie Chart)
+
+This shows the number of processes attributed to each user on the system:
+
+![Process count per user](./visualizations/process_count_user.png)
+
+#### 🧠 Resource Usage by Process (Column Chart)
+
+This report identifies processes consuming the most **CPU time** and **RAM**:
+
+![CPU and RAM usage per process](./visualizations/cpu_ram_usage_process.png)
+
+---
+
+### 🛠️ How to Create
+
+You can generate similar visualizations by:
+1. Inserting a **Pivot Table** from your `process_report.csv`
+2. Dragging fields like `user`, `name`, `cpu_percent`, and `memory_mb` into Rows/Values
+3. Switching aggregation mode (e.g., from Sum to Count) if needed
+4. Adding **Charts** (Pie, Bar, or Column) from Excel’s ribbon
+
+In MacOS, the generated CSV file may appear in a single-line format when opened in Excel. To properly display the data in separate columns:
+> Go to Data → Text to Columns, then choose Comma as the delimiter to split the values into individual columns.
+
+More advanced dashboards can be created with Power BI, Tableau, or open-source tools like Apache Superset.
+
+---
+
 Happy reporting and thanks for considering my candidacy! 📊
