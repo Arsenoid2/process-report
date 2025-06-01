@@ -77,7 +77,7 @@ bash mac-process-report.sh
 
 ### 💡 Tip: Create a macOS App
 
-As mentioned in [README.md](https://github.com/Arsenoid2/process-report/blob/main/README.md), a user-friendly [Process Reporter v1.0.0_Mac](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip) MacOS app added in GitHub Releases and can be downloaded and run. If you prefer to build the app yourself, see [Build Instructions](./MacOS/build-instruction.md). You can create a native `.app` file using Automator that runs this script with double-click.
+As mentioned in [README.md](https://github.com/Arsenoid2/process-report/blob/main/README.md), a user-friendly [Process Reporter v1.0.0_Mac](https://github.com/Arsenoid2/process-report/releases/download/v1.0.0/Process.Reporter.zip) MacOS app added in GitHub Releases and can be downloaded and run. If you prefer to build the app yourself, see [Build Instructions](https://github.com/Arsenoid2/process-report/blob/4e27b417af73499980695ca2ee745fef08596c0a/Single-platform/MacOS/build-instructions.md). You can create a native `.app` file using Automator that runs this script with double-click.
 
 ### ⚖️ Pros and Limitations
 
