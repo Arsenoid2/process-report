@@ -120,4 +120,4 @@ This tool is continuously tested with [GitHub Actions](https://github.com/Arseno
 
 ## 💡 See Also
 
-For simpler, platform-specific scripts, check the [`single-platform`](../single-platform/) version that requires no Python or setup.
+For simpler, platform-specific scripts, check the [`single-platform`](https://github.com/Arsenoid2/process-report/tree/c71788a9ecc9d8324de19608c725f202820376e9/Single-platform) version that requires no Python or setup.
